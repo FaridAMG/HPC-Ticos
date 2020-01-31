@@ -2,7 +2,7 @@
 #SBATCH --job-name=cenatMD
 #SBATCH --output=cenatMD.o%j
 #SBATCH --partition=nu-hpc
-#SBATCH --ntasks=16
+#SBATCH --ntasks=8
 #SBATCH --time=00:05:00
 
 cd $SLURM_SUBMIT_DIR
@@ -12,7 +12,7 @@ module load gcc/7.2.0
 
 ###############Execution commands####################################
 
-mpiexec -np 16 ./cenatMD 200 7000 0 0 
+mpiexec -np 8 ./cenatMD 100 100 0 0 
 
 
 ######################################################################

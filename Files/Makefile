@@ -1,5 +1,5 @@
 all:
-	mpicc -lm -o cenatMD cenatMD.c
+	mpicc -fopenmp -lm -o cenatMD cenatMD.c
 	sbatch cenatMDesempeno.slurm
 	
 clean:
